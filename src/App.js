@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {SiteDetails} from './SideDetails.js';
+import {Home} from './Home.js';
 const URL = "./BoyleSites.json";
 function App() {
   
@@ -18,7 +21,13 @@ function App() {
 
   return (
     <>
-    {siteData.map(sites=><div className={sites.Site}><h1>{sites.Site}</h1><img src ={sites.Image}/><p>{sites.Description}</p></div>)}
+    <h1>Boyle County Sites</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home data={siteData}/>}/>
+        <Route path="/sites/:siteName" element={<SiteDetails data={siteData}/>}/>
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }
