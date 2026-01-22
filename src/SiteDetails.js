@@ -1,10 +1,11 @@
-import {React} from 'react';
+import React from 'react';
 import {useParams,Link} from 'react-router-dom';
-export default function SiteDetails({siteData})
+
+export default function SiteDetails({data})
 
 {
-    const {siteName}=useParams();
-    const site = siteData.find(site=>site.Site===siteName);
+    const {siteName}= useParams();
+    const site = data.find(site=>site.Site===siteName);
 
     return(<>
 
