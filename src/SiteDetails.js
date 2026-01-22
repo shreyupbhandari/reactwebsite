@@ -1,6 +1,6 @@
 import {React} from 'react';
-import {useParams} from 'react-router-dom';
-function SiteDetails({siteData})
+import {useParams,Link} from 'react-router-dom';
+export default function SiteDetails({siteData})
 
 {
     const {siteName}=useParams();
@@ -17,9 +17,5 @@ function SiteDetails({siteData})
     }
     </>
     );
-
-
-
-
 
 }

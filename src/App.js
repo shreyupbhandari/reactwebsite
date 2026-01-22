@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import { useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {SiteDetails} from './SideDetails.js';
-import {Home} from './Home.js';
+import SiteDetails from './SideDetails.js';
+import Home from './Home.js';
 const URL = "./BoyleSites.json";
 function App() {
   
