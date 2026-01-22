@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useState } from 'react';
+const URL = "./BoyleSites.json";
 
 function App() {
+  
+  const [siteData, setSiteData] = useState([]);
+  useEffect(() => {
+    async function fetchSiteData()
+    {
+      const response =await fetch(URL);
+      const result = await response.json();
+      setSiteData(result);
+      console.log(result);
+    }
+    fetchSiteData();
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    </>
   );
 }
 
