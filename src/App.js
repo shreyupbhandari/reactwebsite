@@ -3,7 +3,6 @@ import './App.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 const URL = "./BoyleSites.json";
-
 function App() {
   
   const [siteData, setSiteData] = useState([]);
@@ -13,13 +12,13 @@ function App() {
       const response =await fetch(URL);
       const result = await response.json();
       setSiteData(result);
-      console.log(result);
     }
     fetchSiteData();
   },[]);
 
   return (
     <>
+    {siteData.map(sites=><div className={sites.Site}><h1>{sites.Site}</h1><img src ={sites.Image}/><p>{sites.Description}</p></div>)}
     </>
   );
 }
