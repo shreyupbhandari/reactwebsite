@@ -1,5 +1,6 @@
 import React from 'react';
 import {useParams,Link} from 'react-router-dom';
+import './sites.css'; 
 
 export default function SiteDetails({data})
 

@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect} from 'react';
 import {useState} from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import SiteDetails from './SiteDetails.js';
 import Home from './Home.js';
 const URL = "./BoyleSites.json";
@@ -21,14 +21,13 @@ function App() {
 
   return (
     <>
+   
     
-    <BrowserRouter>
-    <h1>Boyle County Sites</h1>
-      <Routes>
+   <Routes>
         <Route path="/" element={<Home data={siteData}/>}/>
-        <Route path="/sites/:siteId" element={<SiteDetails data={siteData}/>}/>
-      </Routes>
-    </BrowserRouter>
+        <Route path="sites/:siteId" element={<SiteDetails data={siteData}/>}/>
+    </Routes>
+    
     </>
   );
 }
