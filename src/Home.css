@@ -1,4 +1,4 @@
-img {
+.sites-container img {
   width: 300px;
   height: 200px;
   object-fit: cover;
@@ -6,7 +6,7 @@ img {
   margin-top: 20px;
 }
 
-body {
+.sites-container body {
   background: rgb(235, 227, 217);
   margin: 0px 0px 0px 0px;
 }
@@ -32,7 +32,18 @@ body {
   height: 400px;
   background: linear-gradient(yellow, rgb(219, 219, 181));
   border-radius: 40px;
+  box-shadow: 0 0 0 2px rgba(28, 65, 145, 0.795);
 }
+
+
+.sites-container div:hover {
+  transform: scale(1.02);
+  font-weight: 500;
+}
+.sites-container div:hover img{
+  transform: scale(1.14);
+}
+
 
 .sites-container header {
   background: linear-gradient(#4065b1, #4065b1);
@@ -44,4 +55,5 @@ body {
 
 .sites-container a {
   padding-top: 20px;
+  transition: color 0.2s ease;
 }
