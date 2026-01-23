@@ -1,4 +1,4 @@
-img{
+img {
   width: 300px;
   height: 200px;
   object-fit: cover;
@@ -6,9 +6,9 @@ img{
   margin-top: 20px;
 }
 
-body{
-    background: rgb(235, 227, 217);
-    margin: 0px 0px 0px 0px;
+body {
+  background: rgb(235, 227, 217);
+  margin: 0px 0px 0px 0px;
 }
 
 .sites-container {
@@ -19,12 +19,11 @@ body{
   flex: 1 1 0;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center; 
+  align-items: center;
   text-align: center;
 }
 
-
-.sites-container div{
+.sites-container div {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -43,8 +42,6 @@ body{
   margin-bottom: 30px;
 }
 
-.sites-container a{
-    padding-top: 20px;
-
+.sites-container a {
+  padding-top: 20px;
 }
-
