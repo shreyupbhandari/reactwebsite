@@ -11,7 +11,6 @@ export default function Home({data})
 return(
 <>
 
-
 <div className="home-container">
     <header><h1>Boyle County Sites</h1></header>
 
@@ -31,7 +30,5 @@ return(
 
 </>
 );
-
-
 
 }
