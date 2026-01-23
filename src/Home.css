@@ -1,3 +1,20 @@
+.home-container header{
+  display: flex;
+  background: linear-gradient(#4065b1, #9aa2b2);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.home-container footer{
+  height: 40px;
+  margin: 20px;
+}
+
+
+
 .sites-container img {
   width: 300px;
   height: 200px;
@@ -42,15 +59,6 @@
 }
 .sites-container div:hover img{
   transform: scale(1.14);
-}
-
-
-.sites-container header {
-  background: linear-gradient(#4065b1, #4065b1);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  width: 100%;
-  margin-bottom: 30px;
 }
 
 .sites-container a {
