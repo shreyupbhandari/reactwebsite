@@ -1,6 +1,5 @@
 import logo from './logo.svg';
-import {useEffect} from 'react';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import SiteDetails from './SiteDetails.js';
 import Home from './Home.js';
