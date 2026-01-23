@@ -21,11 +21,12 @@ function App() {
 
   return (
     <>
-    <h1>Boyle County Sites</h1>
+    
     <BrowserRouter>
+    <h1>Boyle County Sites</h1>
       <Routes>
         <Route path="/" element={<Home data={siteData}/>}/>
-        <Route path="/sites/:siteName" element={<SiteDetails data={siteData}/>}/>
+        <Route path="/sites/:siteId" element={<SiteDetails data={siteData}/>}/>
       </Routes>
     </BrowserRouter>
     </>
