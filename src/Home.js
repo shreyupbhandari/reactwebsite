@@ -15,19 +15,16 @@ return(
 <div className="home-container">
     <header><h1>Boyle County Sites</h1></header>
 
-{/* i'm not sure why this doesnt make the whole div container a think imma try something else */}
+    <div className="sites-container">
         {interativeData.map(sites=>
             <Link to={`/sites/${sites.SiteID}`}>
-            <div className="sites-container">
                 <div className={sites.Site}>
                 <h1>{sites.Site}</h1>
                 <img src ={sites.Image}/>
                 </div>
-            </div>
-            </Link>  
+            </Link>
         )}
-
-   
+    </div>
 
     <footer><p>Site by Shreyup and Mitch ;)</p></footer>
 </div>

@@ -45,12 +45,14 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  width: 40%;
+  width: 570px;
   height: 400px;
   background: linear-gradient(rgb(99, 165, 186), rgb(219, 219, 181));
   border-radius: 40px;
   box-shadow: 0 0 0 2px rgba(28, 65, 145, 0.795);
 }
+
+
 
 
 .sites-container div:hover {
@@ -63,5 +65,6 @@
 
 .sites-container a {
   padding-top: 20px;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  color: white
 }
