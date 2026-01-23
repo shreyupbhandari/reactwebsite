@@ -1,4 +1,34 @@
-body{
-    background-color: black;
+.site-level-container{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  align-content: center;
 }
 
+.site-level-container h2{
+  border: 2px solid red;
+  text-align: center;
+
+}
+
+
+.site-level-container img{
+  display: flex;
+  border: 2px solid red;
+  align-self: center;
+
+}
+
+
+.site-level-container a{
+  border: 2px solid red;
+
+}
+
+
+.site-level-container p{
+    margin: 20px 20% 0px 20%;
+    background: rgb(220, 220, 105);
+    padding: 20px;
+    border-radius: 20px;
+}
