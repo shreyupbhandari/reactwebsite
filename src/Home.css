@@ -30,7 +30,7 @@ body {
   align-items: center;
   width: 40%;
   height: 400px;
-  background: linear-gradient(yellow, rgb(219, 219, 181));
+  background: linear-gradient(rgb(99, 165, 186), rgb(219, 219, 181));
   border-radius: 40px;
 }
 
