@@ -31,7 +31,7 @@ return(
             <Link to={`/sites/${sites.SiteID}`}>
                 <div className={sites.Site}>
                 <h1>{sites.Site}</h1>
-                <img src ={sites.Image}/>
+                <img src ={sites.Image} alt={sites.description}/>
                 </div>
             </Link>
         )}
