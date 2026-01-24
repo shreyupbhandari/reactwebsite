@@ -5,17 +5,29 @@ import './Home.css';
 
 export default function Home({data})
 {
- const [sortDirectiion, setSortDirection]=useState(null); 
- const interativeData=[...data];
+const [searchText,setSearchText]=useState('');
+let interactiveData=[...data];
+
+
+
+if (searchText.trim()!=='')
+{
+    interactiveData=interactiveData.filter(sites=>sites.Site.toLowerCase().includes(searchText.toLowerCase()));
+}
 
 return(
 <>
 
 <div className="home-container">
     <header><h1>Boyle County Sites</h1></header>
+     <input
+      placeholder="Search Sites"
+      value={searchText}
+      onChange={event => setSearchText(event.target.value)}/>
+
 
     <div className="sites-container">
-        {interativeData.map(sites=>
+        {interactiveData.map(sites=>
             <Link to={`/sites/${sites.SiteID}`}>
                 <div className={sites.Site}>
                 <h1>{sites.Site}</h1>
