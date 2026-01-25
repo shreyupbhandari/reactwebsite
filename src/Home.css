@@ -63,3 +63,22 @@
   text-decoration: none;
   color: white
 }
+
+.home-container .searchBar{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.home-container input{
+  border-radius:10px;
+  width: 350px;
+  height: 30px;
+  border-width: 3px;
+}
+
+.home-container input:hover {
+  transform: scale(1.05);
+
+}
