@@ -29,11 +29,13 @@ export default function SiteDetails({ data }) {
             <h2>{site.Site}</h2>
             <img src={`/${site.Image}`} alt={site.Site} />
             <p>{site.Description}</p>
+            <div className = "buttons">
             <div className="previousButton">
-               {siteIndex>0&&<button onClick={previousButton}>Go Back 1 page</button>}
+               {siteIndex>0&&<button onClick={previousButton}>Previousd page</button>}
             </div>
             <div className="nextButton">
                 {siteIndex<data.length-1&&<button onClick={nextButton}>Next Page</button>}
+            </div>
             </div>
 
             <Link to="/">Go to Home</Link>

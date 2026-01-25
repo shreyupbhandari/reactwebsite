@@ -13,6 +13,12 @@
   margin-top: 20px;
 }
 
+.site-level-container .buttons{
+  display: flex;
+  justify-content:  space-between;
+  margin: 10px;
+}
+
 .site-level-container h2 {
   border: 2px solid red;
   text-align: center;
