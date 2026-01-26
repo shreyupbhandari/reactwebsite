@@ -26,11 +26,11 @@ export default function SiteDetails({ data }) {
       {site ? (
         <>
           <div className="site-level-container">
-            <body>
+            
             <h2>{site.Site}</h2>
             <img src={`/${site.Image}`} alt={site.Site} />
             <p>{site.Description}</p>
-            </body>
+            
             <div className = "actions">
               <div className = "buttons">
                 <div className="previousButton">
