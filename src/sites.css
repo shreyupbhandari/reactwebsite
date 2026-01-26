@@ -1,7 +1,6 @@
 .site-level-container {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   align-content: center;
 }
 
@@ -61,7 +60,11 @@
   color: white;
 }
 
-/*
-how to get the .actions class to stay at the bottom 
-*/
+.actions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
 
