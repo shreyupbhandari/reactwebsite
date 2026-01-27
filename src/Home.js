@@ -52,9 +52,9 @@ export default function Home({ data }) {
     }
     return "Other";
 
-    let interactiveData = [...data];
+    
   };
-
+  let interactiveData = [...data];
   if (searchText.trim() !== "") {
     interactiveData = interactiveData.filter((sites) =>
       sites.Site.toLowerCase().includes(searchText.toLowerCase()),
