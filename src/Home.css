@@ -1,16 +1,58 @@
+.home-container{
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-bottom: 40px;
+}
 .home-container header{
   display: flex;
-  background: linear-gradient(#4065b1, #9aa2b2);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   color: rgb(0, 0, 0);
   text-align: center;
   justify-content: center;
   width: 100%;
   margin-bottom: 30px;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.home-container header h1{
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .home-container footer{
   height: 40px;
-  margin: 20px;
+  margin: 40px 20px 20px;
+  text-align: center;
+  color: #666;
+}
+
+.controls-section
+{
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.searchBar input
+{
+  border-radius: 25px;
+  width: 400px;
+  height: 40px;
+  border: 2px solid black;
+  padding: 0 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .sites-container img {
