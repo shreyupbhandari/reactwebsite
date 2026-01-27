@@ -49,7 +49,7 @@ export default function Home({ data }) {
       name.includes("inn") ||
       name.includes("hall")
     ) {
-      return "Houses";
+      return "Residences";
     }
 
     return "Other";
@@ -101,7 +101,7 @@ export default function Home({ data }) {
     );
   };
 
-  const categories = ["All", "Churches", "Houses", "Public Buildings", "Other"];
+  const categories = ["All", "Churches", "Residences", "Public Buildings", "Other"];
   return (
     <>
       <div className="home-container">
