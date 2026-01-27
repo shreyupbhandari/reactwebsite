@@ -193,7 +193,7 @@ export default function Home({ data }) {
                   <div className="image-wrapper">
                     <img src={sites.Image} alt={sites.Site} />
                     <div className="image-overlay">
-                      <span>Click to show more.</span>
+                      <span>Click to k more.</span>
                     </div>
                   </div>
                   <div className="card-category">{getCategory(sites.Site)}</div>

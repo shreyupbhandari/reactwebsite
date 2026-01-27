@@ -44,9 +44,9 @@ export default function SiteDetails({ data }) {
             
             <div className = "action-buttons">
               <div className = "navigation-buttons">
-                  {siteIndex>0&&(<button onClick={previousButton} className="previous-button">←Previous Site</button>)}
+                  {siteIndex>0&&(<button onClick={previousButton} className="nav-button previous-button">←Previous Site</button>)}
                 
-                  {siteIndex<data.length-1&&(<button onClick={nextButton} className="next-button">Next Site→</button>)}
+                  {siteIndex<data.length-1&&(<button onClick={nextButton} className="nav-button next-button">Next Site→</button>)}
               </div>
               <div className="Home-button">
                  <Link to="/" className="home-link">🏠 Go to Home</Link>
@@ -58,7 +58,7 @@ export default function SiteDetails({ data }) {
         <div className="error-container">
           <h2>Error 404 Page Not Found!</h2>
           <p>The sites you are looking for doesn't exist.</p>
-          <Link to="/" className="home-link">Go to Home to explore furthter.</Link>
+          <Link to="/" className="home-link">Go to Home to explore further.</Link>
         </div>
       )}
     </>
