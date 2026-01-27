@@ -193,7 +193,7 @@ export default function Home({ data }) {
                     <h2>{sites.Site}</h2>
                     <button
                       className={`favorite-button ${favorites.includes(sites.SiteID) ? "active" : ""}`}
-                      onClick={(event) => toggleFavorite(sites.siteID, event)}
+                      onClick={(event) => toggleFavorite(sites.SiteID, event)}
                     >
                       ❤️
                     </button>
