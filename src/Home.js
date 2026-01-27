@@ -17,7 +17,7 @@ export default function Home({ data }) {
         "boyleCountySitesFavorites",
         JSON.stringify(favorites),
       ),
-    [],
+    [favorites],
   );
 
   //Retrieve those favorites set in the local storage
@@ -27,7 +27,7 @@ export default function Home({ data }) {
     if (savedFavorites) {
       setFavorites(JSON.parse(savedFavorites));
     }
-  }, [favorites]);
+  }, []);
 
   //This was an attempt to categorize the sites based on the site name. If the JSON file is updated with site categories, this can be a great addition.
   const getCategory = (siteName) => {
@@ -75,9 +75,29 @@ export default function Home({ data }) {
 
   interactiveData = [...interactiveData].sort((a, b) => {
     if (sortOption === "name-ascending") {
-      return a.Site - b.Site;
-    } else if (sortOption === "name-descending") {
-      return b.Site - a.Site;
+      if (a.Site>b.Site)
+      return 1;
+      else if(b.Site>a.Site)
+      {
+        return -1;
+      }
+      else
+      {
+        return 0;
+      }
+    } 
+    else if (sortOption === "name-descending") 
+    {
+      if (a.Site>b.Site)
+      return -1;
+      else if(b.Site>a.Site)
+      {
+        return 1;
+      }
+      else
+      {
+        return 0;
+      }
     }
     return 0;
   });
@@ -119,7 +139,7 @@ export default function Home({ data }) {
           <div className="results">
             <p>
               {interactiveData.length}
-              {interactiveData.lebgth === 1 ? "site" : "sites"} found
+              {interactiveData.length === 1 ? "site" : "sites"} found
             </p>
             {favorites.length > 0 && (
               <button
