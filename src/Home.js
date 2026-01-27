@@ -10,7 +10,6 @@ const [selectedCategory, setSelectedCategory]=useState('All');
 const [sortOption,setSortOption]=useState('name-ascending');
 const [favorites,setFavorites]= useState([]);
 const [showFavoritesOnly,setShowFavoritesOnly]=useState(false);
-let interactiveData=[...data];
 
 //Using local storage to set the favorites 
 useEffect(()=>
@@ -36,27 +35,80 @@ const getCategory=(siteName)=>
   {
     return "Churches";
   }
-  if (name.includes("house") || name.includes("inn") || name.includes())
-
-
-
+  if (name.includes("house") || name.includes("inn") || name.includes("hall"))
+  {
+    return "Houses";
+  }
+   if (name.includes("courthouse") || name.includes("building") || name.includes("office")|| name.includes("post office"))
+  {
+    return "Public Buildings";
+  }
+  return "Other";
+  
+let interactiveData=[...data];
 }
+
 if (searchText.trim()!=='')
 {
     interactiveData=interactiveData.filter(sites=>sites.Site.toLowerCase().includes(searchText.toLowerCase()));
 }
 
+if (selectedCategory!=="All")
+{
+  interactiveData=interactiveData.filter((sites)=>getCategory(sites.Site)===selectedCategory);
+}
+
+if (showFavoritesOnly)
+{
+  interactiveData=interactiveData.filter(sites=>
+    favorites.includes(sites.SiteID));
+}
+
+interactiveData=[...interactiveData].sort((a,b)=>
+{
+  if (sortOption==="name-ascending")
+  {
+    return a.Site-b.Site;
+  }
+  else if (sortOption==="name-descending")
+  {
+    return b.Site-a.Site;
+  }
+  return 0;
+});
+
+const toggleFavorite=(siteID,event)=>
+{
+  event.preventDefault();
+  setFavorites(prev=> prev.includes(siteID)? prev.filter(id=>id!==siteID):[...prev, siteID]);
+};
+
+const categories=["All","Churches","Houses","Public Buildings","Other"];
 return(
 <>
 
 <div className="home-container">
-    <header><h1>Boyle County Sites</h1></header>
-    <div className = "searchBar">
-     <input
-      placeholder="Search Sites"
-      value={searchText}
-      onChange={event => setSearchText(event.target.value)}/>
+    <header>
+    <h1>Boyle County Sites</h1>
+    </header>
+
+    <div className = "controls-section">
+      <div className='searchBar'>
+        <input
+        placeholder="Search Sites"
+        value={searchText}
+        onChange={event => setSearchText(event.target.value)}/>
+        {searchText && (<button className="clear-search" onClick={()=>setSearchText('')}}>
+        ✕
+        </button>)}
     </div>
+
+    <div className='results'>
+      <p>{interactiveData.length}{interactiveData.lebgth===1?'site':'sites'} found
+      </p>
+      {favorites.length>0 &&
+      (<button className={`favorites-toggle ${showFavoritesOnly ? 'active':''}`} onClick={()=>setShowFavoritesOnly(!showFavoritesOnly)}>
+        {showFavoritesOnly?"Show All":"Show Favorites"}</button>)}
 
     <div className="sites-container">
         {interactiveData.map(sites=>
