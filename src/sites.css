@@ -24,14 +24,23 @@
   text-decoration: underline;
 }
 
-
 .site-level-container img {
   width: 100%;
   max-width: 800px;
   max-height: 600px;
   object-fit: cover;
   border-radius: 20px;
-  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  padding: 0 20px;
 }
 
 .site-level-container .buttons{
