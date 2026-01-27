@@ -33,13 +33,13 @@
   margin-top: 20px;
 }
 
-.site-level-container .buttons{
+.site-level-container .navigation-buttons{
   display: flex;
   justify-content:  space-between;
   margin: 10px;
 }
 
-.site-level-container .buttons div:hover{
+.site-level-container .navigation-buttons div:hover{
   transform: scale(1.04);
 }
 
