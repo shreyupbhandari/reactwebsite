@@ -137,9 +137,9 @@ export default function Home({ data }) {
           </div>
 
           <div className="results">
-            <p>
+            <p> Found {` `}
               {interactiveData.length}
-              {interactiveData.length === 1 ? "site" : "sites"} found
+              {interactiveData.length === 1 ? " Site" : " Sites"}
             </p>
             {favorites.length > 0 && (
               <button
