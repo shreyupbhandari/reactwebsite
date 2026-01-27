@@ -36,13 +36,6 @@ export default function Home({ data }) {
       return "Churches";
     }
     if (
-      name.includes("house") ||
-      name.includes("inn") ||
-      name.includes("hall")
-    ) {
-      return "Houses";
-    }
-    if (
       name.includes("courthouse") ||
       name.includes("building") ||
       name.includes("office") ||
@@ -50,9 +43,16 @@ export default function Home({ data }) {
     ) {
       return "Public Buildings";
     }
-    return "Other";
 
-    
+    if (
+      name.includes("house") ||
+      name.includes("inn") ||
+      name.includes("hall")
+    ) {
+      return "Houses";
+    }
+
+    return "Other";
   };
   let interactiveData = [...data];
   if (searchText.trim() !== "") {
@@ -75,27 +75,17 @@ export default function Home({ data }) {
 
   interactiveData = [...interactiveData].sort((a, b) => {
     if (sortOption === "name-ascending") {
-      if (a.Site>b.Site)
-      return 1;
-      else if(b.Site>a.Site)
-      {
+      if (a.Site > b.Site) return 1;
+      else if (b.Site > a.Site) {
         return -1;
-      }
-      else
-      {
+      } else {
         return 0;
       }
-    } 
-    else if (sortOption === "name-descending") 
-    {
-      if (a.Site>b.Site)
-      return -1;
-      else if(b.Site>a.Site)
-      {
+    } else if (sortOption === "name-descending") {
+      if (a.Site > b.Site) return -1;
+      else if (b.Site > a.Site) {
         return 1;
-      }
-      else
-      {
+      } else {
         return 0;
       }
     }
@@ -137,7 +127,9 @@ export default function Home({ data }) {
           </div>
 
           <div className="results">
-            <p> Found {` `}
+            <p>
+              {" "}
+              Found {` `}
               {interactiveData.length}
               {interactiveData.length === 1 ? " Site" : " Sites"}
             </p>

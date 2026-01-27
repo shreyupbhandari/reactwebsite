@@ -258,7 +258,7 @@ filter-chip:hover {
 }
 
 
-.favorite-btn {
+.favorite-button {
  background: rgba(255, 255, 255, 0.2);
  border: none;
  font-size: 20px;
@@ -270,13 +270,13 @@ filter-chip:hover {
 }
 
 
-.favorite-btn:hover {
+.favorite-button:hover {
  background: rgba(255, 255, 255, 0.3);
  transform: scale(1.2);
 }
 
-
-.favorite-btn.active {
+/*This was very cool.*/
+.favorite-button.active {
  background: rgba(255, 107, 107, 0.3);
  animation: heartBeat 0.5s ease;
 }
@@ -353,33 +353,23 @@ filter-chip:hover {
  font-size: 20px;
 }
 
+/*Mobile resolution tweaks.*/
 @media (max-width: 768px) {
  .home-container header h1 {
    font-size: 1.8rem;
  }
-
 
  .searchBar input {
    width: 100%;
    max-width: 300px;
  }
 
-
  .filter-section {
    flex-direction: column;
  }
 
-
  .site-card {
    width: 100%;
    max-width: 350px;
- }
-
-
- .back-to-top {
-   bottom: 20px;
-   right: 20px;
-   width: 45px;
-   height: 45px;
  }
 }
