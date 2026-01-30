@@ -17,7 +17,7 @@ export default function Home({ data }) {
         "boyleCountySitesFavorites",
         JSON.stringify(favorites),
       ),
-    [favorites],
+    [favorites]
   );
 
   //Retrieve those favorites set in the local storage
