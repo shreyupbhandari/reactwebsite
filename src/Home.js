@@ -23,6 +23,7 @@ export default function Home({ data }) {
   //Retrieve those favorites set in the local storage
   useEffect(() => {
     const savedFavorites = localStorage.getItem("boyleCountySitesFavorites");
+    console.log(savedFavorites);
 
     if (savedFavorites) {
       setFavorites(JSON.parse(savedFavorites));
